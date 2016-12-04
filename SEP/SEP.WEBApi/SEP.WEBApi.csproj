@@ -12,7 +12,7 @@
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>SEP.WEBApi</RootNamespace>
-    <AssemblyName>SEP.INWEBApi</AssemblyName>
+    <AssemblyName>SEP.WEBApi</AssemblyName>
     <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
@@ -251,15 +251,15 @@
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\SEP.INContractRepository\SEP.Contract.csproj">
+    <ProjectReference Include="..\SEP.Contract\SEP.Contract.csproj">
       <Project>{bbe1e66e-0aa0-46b7-b294-4bdc160a106c}</Project>
       <Name>SEP.Contract</Name>
     </ProjectReference>
-    <ProjectReference Include="..\SEP.INModel\SEP.Model.csproj">
+    <ProjectReference Include="..\SEP.Model\SEP.Model.csproj">
       <Project>{38c9341f-0080-4d5e-9641-813266d83fc3}</Project>
       <Name>SEP.Model</Name>
     </ProjectReference>
-    <ProjectReference Include="..\SEP.INRepository\SEP.Repository.csproj">
+    <ProjectReference Include="..\SEP.Repository\SEP.Repository.csproj">
       <Project>{8d6a49b2-0fb4-4365-9d41-940c4524403e}</Project>
       <Name>SEP.Repository</Name>
     </ProjectReference>

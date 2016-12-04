@@ -8,7 +8,7 @@
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>SEP.Repository</RootNamespace>
-    <AssemblyName>SEP.INRepository</AssemblyName>
+    <AssemblyName>SEP.Repository</AssemblyName>
     <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
@@ -74,11 +74,11 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\SEP.INContractRepository\SEP.Contract.csproj">
+    <ProjectReference Include="..\SEP.Contract\SEP.Contract.csproj">
       <Project>{bbe1e66e-0aa0-46b7-b294-4bdc160a106c}</Project>
       <Name>SEP.Contract</Name>
     </ProjectReference>
-    <ProjectReference Include="..\SEP.INModel\SEP.Model.csproj">
+    <ProjectReference Include="..\SEP.Model\SEP.Model.csproj">
       <Project>{38c9341f-0080-4d5e-9641-813266d83fc3}</Project>
       <Name>SEP.Model</Name>
     </ProjectReference>

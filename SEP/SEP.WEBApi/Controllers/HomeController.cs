@@ -14,10 +14,10 @@ namespace SEP.WEBApi.Controllers
         {
             _insuranceTypeService = insuranceTypeService;
         }
-
-
+        
         public string Index()
         {
+            ViewBag.Title = "Home page";
             var types = _insuranceTypeService.GetAll();
             return String.Join(",",_insuranceTypeService.GetAll().Select(i => i.Name));
         }

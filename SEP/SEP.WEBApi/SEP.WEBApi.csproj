@@ -144,6 +144,16 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\css\font-awesome.min.css" />
+    <Content Include="Assets\css\ie8.css" />
+    <Content Include="Assets\css\ie9.css" />
+    <Content Include="Assets\css\main.css" />
+    <Content Include="Assets\js\ie\html5shiv.js" />
+    <Content Include="Assets\js\ie\respond.min.js" />
+    <Content Include="Assets\js\jquery.min.js" />
+    <Content Include="Assets\js\main.js" />
+    <Content Include="Assets\js\skel.min.js" />
+    <Content Include="Assets\js\util.js" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
@@ -200,6 +210,39 @@
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <Content Include="Assets\fonts\fontawesome-webfont.eot" />
+    <Content Include="Assets\fonts\fontawesome-webfont.svg" />
+    <Content Include="Assets\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Assets\fonts\fontawesome-webfont.woff" />
+    <Content Include="Assets\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Assets\fonts\FontAwesome.otf" />
+    <Content Include="Assets\sass\base\_page.scss" />
+    <Content Include="Assets\sass\base\_typography.scss" />
+    <Content Include="Assets\sass\components\_box.scss" />
+    <Content Include="Assets\sass\components\_button.scss" />
+    <Content Include="Assets\sass\components\_features.scss" />
+    <Content Include="Assets\sass\components\_form.scss" />
+    <Content Include="Assets\sass\components\_icon.scss" />
+    <Content Include="Assets\sass\components\_image.scss" />
+    <Content Include="Assets\sass\components\_list.scss" />
+    <Content Include="Assets\sass\components\_mini-posts.scss" />
+    <Content Include="Assets\sass\components\_posts.scss" />
+    <Content Include="Assets\sass\components\_section.scss" />
+    <Content Include="Assets\sass\components\_table.scss" />
+    <Content Include="Assets\sass\ie8.scss" />
+    <Content Include="Assets\sass\ie9.scss" />
+    <Content Include="Assets\sass\layout\_banner.scss" />
+    <Content Include="Assets\sass\layout\_footer.scss" />
+    <Content Include="Assets\sass\layout\_header.scss" />
+    <Content Include="Assets\sass\layout\_main.scss" />
+    <Content Include="Assets\sass\layout\_menu.scss" />
+    <Content Include="Assets\sass\layout\_sidebar.scss" />
+    <Content Include="Assets\sass\layout\_wrapper.scss" />
+    <Content Include="Assets\sass\libs\_functions.scss" />
+    <Content Include="Assets\sass\libs\_mixins.scss" />
+    <Content Include="Assets\sass\libs\_skel.scss" />
+    <Content Include="Assets\sass\libs\_vars.scss" />
+    <Content Include="Assets\sass\main.scss" />
     <None Include="Scripts\jquery-1.7.1.intellisense.js" />
     <Content Include="Scripts\jquery-1.7.1.js" />
     <Content Include="Scripts\jquery-1.7.1.min.js" />
@@ -215,7 +258,9 @@
     <Content Include="Scripts\knockout-2.1.0.debug.js" />
     <Content Include="Scripts\knockout-2.1.0.js" />
     <Content Include="Scripts\modernizr-2.5.3.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>

@@ -3,6 +3,8 @@ using SEP.Service.Services;
 using System;
 using System.Web.Mvc;
 using System.Linq;
+using System.Net.Http;
+using System.Net.Http.Headers;
 
 namespace SEP.WEBApi.Controllers
 {
@@ -15,11 +17,9 @@ namespace SEP.WEBApi.Controllers
             _insuranceTypeService = insuranceTypeService;
         }
         
-        public string Index()
+        public ActionResult Index()
         {
-            ViewBag.Title = "Home page";
-            var types = _insuranceTypeService.GetAll();
-            return String.Join(",",_insuranceTypeService.GetAll().Select(i => i.Name));
+            return File(Server.MapPath("/Views/Home/Index.html"), "text/html");
         }
     }
 }

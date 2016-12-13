@@ -19,7 +19,7 @@ namespace SEP.WEBApi.Controllers
         
         public ActionResult Index()
         {
-            return File(Server.MapPath("/Views/Home/Index.html"), "text/html");
+            return File(Server.MapPath("App/Index.html"), "text/html");
         }
     }
 }

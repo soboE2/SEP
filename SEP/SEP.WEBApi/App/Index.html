@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+
+<html>
+<head>
+    <title>Editorial by HTML5 UP</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="app/assets/css/main.css" />
+</head>
+<body ng-app="merchant-app">
+    <div id="wrapper">
+        <!-- Main -->
+        <div id="main">
+            <div class="inner">
+
+                <!-- Header -->
+                <div ui-view="header"></div>
+
+                <!-- Banner -->
+                <section id="banner">
+                    <div class="content">
+                        <header>
+                            <h1>Hi, I’m Editorial<br />
+                                by HTML5 UP</h1>
+                            <p>A free and fully responsive site template</p>
+                        </header>
+                        <p>Aenean ornare velit lacus, ac varius enim ullamcorper eu. Proin aliquam facilisis ante interdum congue. Integer mollis, nisl amet convallis, porttitor magna ullamcorper, amet egestas mauris. Ut magna finibus nisi nec lacinia. Nam maximus erat id euismod egestas. Pellentesque sapien ac quam. Lorem ipsum dolor sit nullam.</p>
+                        <ul class="actions">
+                            <li><a href="#" class="button big">Learn More</a></li>
+                        </ul>
+                    </div>
+                    <span class="image object">
+                        <img src="app/assets/images/pic10.jpg" alt="" />
+                    </span>
+                </section>
+            </div>
+        </div>
+        <div id="sidebar">
+            <div class="inner">
+                <!-- Footer -->
+                <div ui-view="menu"></div>
+                <div ui-view="footer"></div>
+            </div>
+        </div>
+    </div>
+    <!-- Scripts -->
+    <script src="app/assets/js/angular.js"></script>
+    <script src="app/assets/js/angular-ui-router.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.8/angular-ui-router.min.js"></script>
+    <script src="app/assets/js/jquery.min.js"></script>
+    <script src="app/assets/js/skel.min.js"></script>
+    <script src="app/assets/js/util.js"></script>
+    <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+    <script src="app/assets/js/main.js"></script>
+
+    <!-- app modules -->
+    <script src="app/app.module.js"></script>
+    <script src="app/components/core/core.module.js"></script>
+
+    <!-- app routes  -->
+    <script src="app/components/core/core.route.js"></script>
+</body>
+</html>

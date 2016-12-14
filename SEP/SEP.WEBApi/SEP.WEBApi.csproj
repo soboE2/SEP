@@ -160,6 +160,7 @@
     <Content Include="App\Assets\images\pic10.jpg" />
     <Content Include="App\Assets\images\pic11.jpg" />
     <Content Include="App\Assets\images\travelinsurance.jpg" />
+    <Content Include="App\Assets\js\angular-resource.js" />
     <Content Include="App\Assets\js\angular.js" />
     <Content Include="App\Assets\js\ie\html5shiv.js" />
     <Content Include="App\Assets\js\ie\respond.min.js" />
@@ -177,6 +178,7 @@
     <Content Include="App\Components\Insurance\Insurance.html" />
     <Content Include="App\Components\Insurance\insurance.module.js" />
     <Content Include="App\Components\Insurance\insurance.route.js" />
+    <Content Include="App\Components\RestServices\merchant-sport.service.js" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
@@ -190,7 +192,7 @@
     <Content Include="Content\themes\base\images\ui-icons_454545_256x240.png" />
     <Content Include="Content\themes\base\images\ui-icons_888888_256x240.png" />
     <Content Include="Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
-    <Content Include="Content\themes\base\jquery-ui.css" />
+    <Content Include="App\Assets\css\jquery-ui.css" />
     <Content Include="Content\themes\base\jquery.ui.accordion.css" />
     <Content Include="Content\themes\base\jquery.ui.all.css" />
     <Content Include="Content\themes\base\jquery.ui.autocomplete.css" />
@@ -266,6 +268,7 @@
     <Content Include="App\Assets\sass\libs\_skel.scss" />
     <Content Include="App\Assets\sass\libs\_vars.scss" />
     <Content Include="App\Assets\sass\main.scss" />
+    <Content Include="App\Components\RestServices\merchant-sport.module.js" />
     <None Include="Scripts\jquery-1.7.1.intellisense.js" />
     <Content Include="App\Assets\js\angular-ui-router.js" />
     <Content Include="Scripts\angular-ui-router.min.js" />

@@ -1,0 +1,48 @@
+﻿<h3>{{}}</h3> <!-- ovde ide nosilac osiguranja/osiguranik -->
+
+<!-- Form -->
+<div class="row 200%">
+    <div class="6u 12u$(medium)">
+        <form method="post" action="#">
+            <div class="row uniform">
+
+                <div class="6u 12u$(xsmall)">
+                    <input type="text" name="demo-name" id="demo-name" value="" placeholder="Name" />
+                </div>
+
+                <div class="6u 12u$(xsmall)">
+                    <input type="text" name="demo-surname" id="demo-surname" value="" placeholder="Surname" />
+                </div>
+
+                <div class="12u$">
+                    <input type="text" name="demo-address" id="demo-address" value="" placeholder="Address" />
+                </div>
+
+                <div class="12u$">
+                <input type="text" name="demo-personalno" id="demo-personalno" value="" placeholder="Personal number" />
+                </div>
+
+                <div class="12u$">
+                    <input type="text" name="demo-passportno" id="demo-passportno" value="" placeholder="Passport number" />
+                </div>
+
+                <div class="12u$">
+                    <input type="text" name="demo-telephone" id="demo-telephone" value="" placeholder="Telephone number" />
+                </div>
+
+                <!-- Za nosioca osiguranja je potrebno uneti i email adresu
+                 kako bi dobio poruku o uspešnoj/neuspešnoj kupovini osiguranja. -->
+                <div class="12u$">
+                    <input type="email" name="demo-email" id="demo-email" value="" placeholder="Email" />
+                </div>
+
+            </div>
+        </form>
+            <ul class="actions" align="center">
+                <li><a ui-sref='main.insurance.insuranceinfo' class="button special">Back</a></li>
+                <!-- ne radi nam back, ne vidi prethodno stanje -->
+                <li><a ui-sref='main.home' class="button special">Cancel</a></li>
+                <li><a ui-sref='' class="button special">Next</a></li>
+            </ul>
+    </div>
+</div>

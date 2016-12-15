@@ -3,7 +3,7 @@
 
     sportService.$inject = ['$resource'];
     function sportService($resource) {
-        var url = "http://travelinsurace.local/api/insurance/sports";
+        var url = "http://travelinsurance.local/api/insurance/sports";
         return $resource(url, {});
     }
 })();

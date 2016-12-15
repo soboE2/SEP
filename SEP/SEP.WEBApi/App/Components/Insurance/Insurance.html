@@ -62,12 +62,12 @@
                     <input type="checkbox" id="demo-human" name="demo-human" checked>
                     <label for="demo-human">Will you do sport?</label>
                 </div>
-                <div class="6u 12u$(small)">
-                    <div class="select-wrapper">
+                <div class="6u 12u$(small)" >
+                    <div class="select-wrapper">                     
                         <select name="demo-category" id="demo-category">
-                            <option value="">Choose sport</option>
-                            <option value="1">Football</option>
-                            <option value="2">Basketball</option>
+                             <option ng-repeat="sport in ic.sports" value="{{sport.id}}">
+                                {{sport.name}}
+                            </option>
                         </select>
                     </div>
                 </div>

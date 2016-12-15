@@ -137,11 +137,13 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\InsuranceController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\RiskItemModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="App\Assets\css\font-awesome.min.css" />
@@ -175,6 +177,7 @@
     <Content Include="App\Components\Core\Home.html" />
     <Content Include="App\Components\Core\Menu.html" />
     <Content Include="App\app.module.js" />
+    <Content Include="App\Components\Insurance\insurance.controller.js" />
     <Content Include="App\Components\Insurance\Insurance.html" />
     <Content Include="App\Components\Insurance\insurance.module.js" />
     <Content Include="App\Components\Insurance\insurance.route.js" />

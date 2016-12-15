@@ -7,6 +7,7 @@ namespace SEP.Repository.Config
         public RiskItemConfig()
             : base()
         {
+            HasRequired(m => m.Risk);
         }
     }
 }

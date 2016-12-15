@@ -5,7 +5,6 @@ using SEP.Repository;
 using SEP.Repository.Repositories;
 using SEP.Service.Services;
 using System.Data.Entity;
-using System.Reflection;
 
 namespace SEP.Service.Helpers
 {
@@ -22,8 +21,9 @@ namespace SEP.Service.Helpers
         {
             _builder.Register(c => new Context("Name=InsuranceDb")).As<DbContext>().InstancePerLifetimeScope();
             _builder.RegisterType<InsuranceTypeRepository>().As<IInsuranceTypeRepository>().InstancePerLifetimeScope();
+            _builder.RegisterType<RiksItemRepository>().As<IRiskItemRepository>().InstancePerLifetimeScope();
+            _builder.RegisterType<RiskRepository>().As<IRiskRepository>().InstancePerLifetimeScope();
 
-            
             return this;
         }
 
@@ -34,6 +34,7 @@ namespace SEP.Service.Helpers
             //        .AsImplementedInterfaces()
             //        .InstancePerLifetimeScope();
             _builder.RegisterType<InsuranceTypeService>().As<IInsuranceTypeService>().InstancePerLifetimeScope();
+            _builder.RegisterType<RiskItemServices>().As<IRiskItemServices>().InstancePerLifetimeScope();
             return this;
         }
 

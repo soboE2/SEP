@@ -12,5 +12,7 @@ namespace SEP.Model.Model
         public decimal Price { get; set; }
 
         public decimal Coefficient { get; set; }
+
+        public Risk Risk { get; set; }
     }
 }

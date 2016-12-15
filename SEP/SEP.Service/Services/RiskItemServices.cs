@@ -24,8 +24,9 @@ namespace SEP.Service.Services
         public IEnumerable<RiskItem> GetAllSports()
         {
             var sportRisk = _riskRepository.GetAll().Where(m => m.Name.Equals("Sport")).FirstOrDefault();
-
-            var sports = _riskItemRepository.GetAllByRiskId(sportRisk.ID);
+            
+            var sports = sportRisk != null ? _riskItemRepository.GetAllByRiskId(sportRisk.ID) : Enumerable.Empty<RiskItem>();
+            
             return sports;
         }
     }

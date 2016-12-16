@@ -1,0 +1,117 @@
+﻿
+<h2>Do you want any other insurance?</h2>
+
+<!-- Break -->
+<form method="post" action="#">
+<div class="row uniform">
+    <div class="12u$">
+        <div class="6u 12u$(small)" >
+            <input type="checkbox" id="demo-priority-low" name="demo-priority" ng-model="home" >
+            <label for="demo-priority-low">Home</label>
+        </div>
+
+        <div ng-show="home">
+            <div class="6u 12u$(xsmall)">
+                <input type="text" name="demo-surface" id="demo-surface" value="" placeholder="Surface (square metre)" />
+            </div>
+
+            <div class="6u 12u$(xsmall)">
+                <input type="text" name="demo-age" id="demo-age" value="" placeholder="Apartment age" />
+            </div>
+
+            <div class="6u 12u$(xsmall)">
+                <input type="text" name="demo-price" id="demo-price" value="" placeholder="Estimated value of the apartment (euros)" />
+            </div>
+
+            <!-- Vuces iz baze -->
+            <div class="select-wrapper 6u 12u$(xsmall)">
+                <select name="demo-risk" id="demo-risk">
+                    <option value="">Choose risk(s)</option>
+                    <option value="1">Fire</option>
+                    <option value="1">Flood</option>
+                    <option value="1">Robery</option>
+                </select>
+            </div>
+
+            <div class="6u 12u$(xsmall)">
+                <input type="text" name="demo-name" id="demo-name" value="" placeholder="Owner's name" />
+            </div>
+
+            <div class="6u 12u$(xsmall)">
+                <input type="text" name="demo-surname" id="demo-surname" value="" placeholder="Owner's surname" />
+            </div>
+
+            <div class="6u 12u$(xsmall)">
+                <input type="text" name="demo-personalno" id="demo-personalno" value="" placeholder="Owner's personal number" />
+            </div>
+
+            <div class="6u 12u$(xsmall)">
+                <input type="text" name="demo-address" id="demo-address" value="" placeholder="Address" />
+            </div>
+        </div>
+
+        <br/>
+        <div class="6u 12u$(small)">
+            <input type="checkbox" id="demo-priority-normal" name="demo-priority" ng-model="ontheroad">
+            <label for="demo-priority-normal">On the road</label>
+       </div>
+
+        <div ng-show="ontheroad">
+            <!-- Vuces iz baze -->
+            <div class="select-wrapper 6u 12u$(xsmall)">
+                <select name="demo-package" id="demo-package">
+                    <option value="">Choose package(s)</option>
+                    <option value="1">Repair</option>
+                    <option value="1">bla</option>
+                    <option value="1">bla ima u pdfu</option>
+                </select>
+            </div>
+
+            <div class="6u 12u$(xsmall)">
+                <input type="text" name="demo-brand" id="demo-brand" value="" placeholder="Car brand" />
+            </div>
+
+            <div class="6u 12u$(xsmall)">
+                <input type="text" name="demo-type" id="demo-type" value="" placeholder="Vehicle type" />
+            </div>
+
+            <div class="6u 12u$(xsmall)">
+                <input type="text" name="demo-year" id="demo-year" value="" placeholder="Production year" />
+            </div>
+
+            <div class="6u 12u$(xsmall)">
+                <input type="text" name="demo-Registration" id="demo-Registration" value="" placeholder="Registration" />
+            </div>
+
+            <div class="6u 12u$(xsmall)">
+                <input type="text" name="demo-chassis" id="demo-chassis" value="" placeholder="Chassis" />
+            </div>
+
+            <div class="6u 12u$(xsmall)">
+                <input type="text" name="demo-name" id="demo-name" value="" placeholder="Owner's name" />
+            </div>
+
+            <div class="6u 12u$(xsmall)">
+                <input type="text" name="demo-surname" id="demo-surname" value="" placeholder="Owner's surname" />
+            </div>
+
+            <div class="6u 12u$(xsmall)">
+                <input type="text" name="demo-personalno" id="demo-personalno" value="" placeholder="Owner's personal number" />
+            </div>
+
+            <br/>
+
+        </div>        
+        
+        <ul class="actions">
+            <li><a ui-sref='main.insurance.userinfo' class="button special">Back</a></li>
+            <li><a ui-sref='main.home' class="button special">Cancel</a></li>
+            <li><a ui-sref='main.insurance.buyinsurance' class="button special">Next</a></li>
+        </ul>
+
+
+
+
+    </div>
+  </div>
+</form>

@@ -186,6 +186,9 @@
     <Content Include="App\Components\Core\Home.html" />
     <Content Include="App\Components\Core\Menu.html" />
     <Content Include="App\app.module.js" />
+    <Content Include="App\Components\Insurance\HomeInsurance\homeInsurance.html" />
+    <Content Include="App\Components\Insurance\HomeInsurance\homeInsurance.module.js" />
+    <Content Include="App\Components\Insurance\HomeInsurance\homeInsurance.route.js" />
     <Content Include="App\Components\Insurance\insurance.controller.js" />
     <Content Include="App\Components\Insurance\Insurance.html" />
     <Content Include="App\Components\Insurance\insurance.module.js" />

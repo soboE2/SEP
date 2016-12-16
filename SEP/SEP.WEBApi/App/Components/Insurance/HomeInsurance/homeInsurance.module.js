@@ -1,3 +1,3 @@
 ﻿(function () {
-    angular.module('merchant-app.insurance.homeinsurance', ['ui.router', 'ngResource']);
+    angular.module('merchant-app.insurance.homeinsurance', ['ui.router']);
 })();

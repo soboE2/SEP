@@ -16,6 +16,19 @@
                     controller: 'InsuranceController as ic'
                 }
             }
+        })
+        .state('main.insurance.insuranceInfo', {
+            url : '/insurance/insuranceInfo',
+            views: {
+                'content@': {
+                    resolve : {
+                        sports: getSports,
+                        regions: getRegions
+                    },
+                    templateUrl: 'app/components/insurance/insuranceinfo/insuranceinfo.html',
+                    controller: 'InsuranceInfoController as iic'
+                }
+            }
         });
 
         //injektuje sport servis

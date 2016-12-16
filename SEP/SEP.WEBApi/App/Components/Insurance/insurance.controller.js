@@ -2,8 +2,8 @@
     "use strict";
     angular.module('merchant-app.insurance').controller('InsuranceController',InsuranceController);
 
-    InsuranceController.$inject = ['sports','regions','insuranceService'];
-    function InsuranceController(sports, regions,insuranceService) {
+    InsuranceController.$inject = ['sports', 'regions', 'insuranceService', '$state'];
+    function InsuranceController(sports, regions, insuranceService, $state) {
         var ic = this;
 
         ic.sports = sports;
@@ -15,7 +15,9 @@
 
 
         function goToDetails() {
-            console.log(ic.consumeSport);
+            if (ic.formName.$valid) {
+                $state.go('main.insurance.insuranceInfo');
+            }
         }
     }
 })();

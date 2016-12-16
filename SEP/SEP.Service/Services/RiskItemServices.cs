@@ -25,9 +25,17 @@ namespace SEP.Service.Services
         {
             var sportRisk = _riskRepository.GetAll().Where(m => m.Name.Equals("Sport")).FirstOrDefault();
             
-            var sports = sportRisk != null ? _riskItemRepository.GetAllByRiskId(sportRisk.ID) : Enumerable.Empty<RiskItem>();
-            
+            var sports = sportRisk != null ? _riskItemRepository.GetAllByRiskId(sportRisk.ID) : Enumerable.Empty<RiskItem>();         
             return sports;
+        }
+
+
+        public IEnumerable<RiskItem> GetAllRegions()
+        {
+            var regionRisk = _riskRepository.GetAll().Where(m => m.Name.Equals("Region")).FirstOrDefault();
+
+            var regions = regionRisk != null ? _riskItemRepository.GetAllByRiskId(regionRisk.ID).OrderBy( m => m.Name) : Enumerable.Empty<RiskItem>();
+            return regions;
         }
     }
 }

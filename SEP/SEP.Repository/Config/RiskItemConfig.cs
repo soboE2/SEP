@@ -8,6 +8,9 @@ namespace SEP.Repository.Config
             : base()
         {
             HasRequired(m => m.Risk);
+            Property(m => m.Coefficient).IsOptional();
+            Property(m => m.Price).IsOptional();
+
         }
     }
 }

@@ -1,5 +1,5 @@
 ﻿(function () {
-
+    "use strict";
     angular.module('merchant-app.core').config(config)
 
     config.$inject = ['$stateProvider', '$urlRouterProvider'];

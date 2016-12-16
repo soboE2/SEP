@@ -2307,6 +2307,8 @@
 	}
 
 	input[type="text"],
+    input[type="number"],
+    input[type="date"]
 	input[type="password"],
 	input[type="email"],
 	input[type="tel"],
@@ -2336,12 +2338,17 @@
 		input[type="tel"]:invalid,
 		input[type="search"]:invalid,
 		input[type="url"]:invalid,
+        input[type="number"]:invalid,
+        input[type="date"]:invalid,
 		select:invalid,
 		textarea:invalid {
 			box-shadow: none;
 		}
 
 		input[type="text"]:focus,
+        input[type="date"]:focus,
+        input[type="number"]:focus,
+        input[type="date"]:focus,
 		input[type="password"]:focus,
 		input[type="email"]:focus,
 		input[type="tel"]:focus,
@@ -2387,6 +2394,8 @@
 		}
 
 	input[type="text"],
+    input[type="date"],
+    input[type="number"],
 	input[type="password"],
 	input[type="email"],
 	input[type="tel"],

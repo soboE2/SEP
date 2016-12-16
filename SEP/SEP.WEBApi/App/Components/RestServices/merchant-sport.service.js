@@ -1,4 +1,5 @@
 ﻿(function () {
+    "use strict";
     angular.module('sport-module').factory('sportService', sportService);
 
     sportService.$inject = ['$resource'];

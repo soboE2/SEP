@@ -17,38 +17,19 @@ namespace SEP.WEBApi.Controllers
             _riskItemServices = riskItemServices;
         }
 
-        [HttpGet]
+        [HttpGet]   
         [Route("sports")]
         public IEnumerable<RiskItemModel> Sports()
         {
             return _riskItemServices.GetAllSports().Select(m => new RiskItemModel { ID = m.ID, Name = m.Name });
         }
 
-        // GET api/<controller>
-        public IEnumerable<string> Get()
+        [HttpGet]   
+        [Route("regions")]
+        public IEnumerable<RiskItemModel> Regions()
         {
-            return new string[] { "value1", "value2" };
+            return _riskItemServices.GetAllRegions().Select(m => new RiskItemModel { ID = m.ID, Name = m.Name });
         }
 
-        // GET api/<controller>/5
-        public string Get(int id)
-        {
-            return "value";
-        }
-
-        // POST api/<controller>
-        public void Post([FromBody]string value)
-        {
-        }
-
-        // PUT api/<controller>/5
-        public void Put(int id, [FromBody]string value)
-        {
-        }
-
-        // DELETE api/<controller>/5
-        public void Delete(int id)
-        {
-        }
     }
 }

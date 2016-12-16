@@ -193,12 +193,9 @@
     <Content Include="App\Components\Insurance\Insurance.html" />
     <Content Include="App\Components\Insurance\insurance.module.js" />
     <Content Include="App\Components\Insurance\insurance.route.js" />
-    <Content Include="App\Components\Insurance\InsuranceInfo\InsuranceInfo.html" />
-    <Content Include="App\Components\Insurance\InsuranceInfo\insuranceInfo.module.js" />
-    <Content Include="App\Components\Insurance\InsuranceInfo\insuranceInfo.route.js" />
-    <Content Include="App\Components\Insurance\UserInfo\userInfo.html" />
-    <Content Include="App\Components\Insurance\UserInfo\userInfo.module.js" />
-    <Content Include="App\Components\Insurance\UserInfo\userInfo.route.js" />
+    <Content Include="App\Components\Insurance\insurance.service.js" />
+    <Content Include="App\Components\RestServices\merchant-region.module.js" />
+    <Content Include="App\Components\RestServices\merchant-region.service.js" />
     <Content Include="App\Components\RestServices\merchant-sport.service.js" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />

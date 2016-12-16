@@ -1,4 +1,5 @@
 ﻿(function () {
-    angular.module('merchant-app', ['merchant-app.core', 'merchant-app.insurance', 'sport-module', 'merchant-app.insurance.insuranceinfo',
-         'merchant-app.insurance.userinfo', 'merchant-app.insurance.homeinsurance'])
+    angular.module('merchant-app', ['merchant-app.core', 'sport-module','region-module', 'merchant-app.insurance']).config(['$qProvider', function ($qProvider) {
+        $qProvider.errorOnUnhandledRejections(false);
+    }]);
 })();

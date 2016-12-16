@@ -9,9 +9,9 @@ namespace SEP.Model.Model
 
         public DateTime EndDate { get; set; }
 
-        public decimal Price { get; set; }
+        public decimal? Price { get; set; }
 
-        public decimal Coefficient { get; set; }
+        public decimal? Coefficient { get; set; }
 
         public Risk Risk { get; set; }
     }

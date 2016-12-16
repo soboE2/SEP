@@ -6,5 +6,6 @@ namespace SEP.Contract.Services
     public interface IRiskItemServices : IBaseService<RiskItem>
     {
         IEnumerable<RiskItem> GetAllSports();
+        IEnumerable<RiskItem> GetAllRegions();
     }
 }

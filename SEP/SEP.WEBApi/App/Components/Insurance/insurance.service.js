@@ -1,11 +1,11 @@
 ﻿(function () {
     "use strict";
 
-    angular.module('merchant-app.insurance').factory('insuranceService', insuranceService);
+    angular.module('merchant-app.insurance', ['travelinsurance-module']).factory('insuranceService', insuranceService);
 
-    insuranceService.$inject = [];
+    insuranceService.$inject = ['travelInsuranceService'];
 
-    function insuranceService() {
+    function insuranceService(travelInsuranceService) {
         var insurance = {};
         insurance.travel = {};
         insurance.travel.sport = {}
@@ -27,11 +27,17 @@
         var getInsuranceUsers = function () {
             return insurance.travel.users;
         };
+        var getTravelInsurancePrice = function () {
+            var travelInsuranceRiskItem = {};
+            travelInsuranceRiskItem.RegionID = isnurance.travel.region
+        }
+
         return {
             getInsurance: getInsurance,
             setInsurance: setInsurance,
             getTravelInsurance: getTravelInsurance,
             getInsuranceUsers: getInsuranceUsers,
+            getTravelInsurancePrice: getTravelInsurancePrice
         };
     }
 })();

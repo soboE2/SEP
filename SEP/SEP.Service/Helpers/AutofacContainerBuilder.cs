@@ -35,6 +35,7 @@ namespace SEP.Service.Helpers
             //        .InstancePerLifetimeScope();
             _builder.RegisterType<InsuranceTypeService>().As<IInsuranceTypeService>().InstancePerLifetimeScope();
             _builder.RegisterType<RiskItemServices>().As<IRiskItemServices>().InstancePerLifetimeScope();
+            _builder.RegisterType<PriceService>().As<IPriceService>().InstancePerLifetimeScope();
             return this;
         }
 

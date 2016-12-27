@@ -49,9 +49,11 @@
     <Compile Include="Repositories\IInsuranceTypeRepository.cs" />
     <Compile Include="Repositories\IRiskItemRepository.cs" />
     <Compile Include="Repositories\IRiskRepository.cs" />
+    <Compile Include="ServiceModels\TravelRiskItem.cs" />
     <Compile Include="Services\IBaseService.cs" />
     <Compile Include="Services\IEumerable.cs" />
     <Compile Include="Services\IInsuranceTypeService.cs" />
+    <Compile Include="Services\IPriceService.cs" />
     <Compile Include="Services\IRiskItemServices.cs" />
     <Compile Include="UnitOfWork\IUnitOfWork.cs" />
   </ItemGroup>

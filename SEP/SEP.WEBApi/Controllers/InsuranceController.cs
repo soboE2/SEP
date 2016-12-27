@@ -1,4 +1,5 @@
-﻿using SEP.Contract.Services;
+﻿using SEP.Contract.ServiceModels;
+using SEP.Contract.Services;
 using SEP.WEBApi.ViewModels;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,10 +12,12 @@ namespace SEP.WEBApi.Controllers
     public class InsuranceController : ApiController
     {
         private readonly IRiskItemServices _riskItemServices;
+        private readonly IPriceService _priceService;
 
-        public InsuranceController(IRiskItemServices riskItemServices)
+        public InsuranceController(IRiskItemServices riskItemServices, IPriceService priceService)
         {
             _riskItemServices = riskItemServices;
+            _priceService = priceService;
         }
 
         [HttpGet]   
@@ -31,5 +34,23 @@ namespace SEP.WEBApi.Controllers
             return _riskItemServices.GetAllRegions().Select(m => new RiskItemModel { ID = m.ID, Name = m.Name });
         }
 
+
+        [HttpGet]
+        [Route("travelinsuranceprice")]
+        public decimal TravelInsurancePrice(TravelInsuranceModel model)
+        {
+            var riskItem = new TravelRiskItem
+            {
+                RegionID = model.RegionID,
+                 NumberOfChildren  = model.NumberOfChildren,
+                 NumberOfAdultsUnder60 = model.NumberOfAdultsUnder60,
+                 DateFrom = model.DateFrom,
+                 DateTo = model.DateTo,
+                 SportId = model.SportId,
+                 InsuranceAmmount = model.InsuranceAmmount
+            };
+            return _priceService.GetTravelInsurancePrice(riskItem); 
+
+        }
     }
 }

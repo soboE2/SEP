@@ -1,7 +1,7 @@
 ﻿(function () {
     "use strict";
 
-    angular.module('merchant-app.insurance', ['travelinsurance-module']).factory('insuranceService', insuranceService);
+    angular.module('merchant-app.insurance').factory('insuranceService', insuranceService);
 
     insuranceService.$inject = ['travelInsuranceService'];
 

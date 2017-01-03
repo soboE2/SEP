@@ -2,7 +2,7 @@
     "use strict";
     angular.module('travelinsurance-module').factory('travelInsuranceService', travelInsuranceService);
 
-    sportService.$inject = ['$resource'];
+    travelInsuranceService.$inject = ['$resource'];
     function travelInsuranceService($resource) {
     	var travelInsuranceAmmountUrl = "http://travelinsurance.local/api/insurance/travelinsuranceprice";
 

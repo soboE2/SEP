@@ -5,7 +5,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
 
-
 namespace SEP.WEBApi.Controllers
 {
     [RoutePrefix("api/insurance")]
@@ -20,37 +19,35 @@ namespace SEP.WEBApi.Controllers
             _priceService = priceService;
         }
 
-        [HttpGet]   
+        [HttpGet]
         [Route("sports")]
         public IEnumerable<RiskItemModel> Sports()
         {
             return _riskItemServices.GetAllSports().Select(m => new RiskItemModel { ID = m.ID, Name = m.Name });
         }
 
-        [HttpGet]   
+        [HttpGet]
         [Route("regions")]
         public IEnumerable<RiskItemModel> Regions()
         {
             return _riskItemServices.GetAllRegions().Select(m => new RiskItemModel { ID = m.ID, Name = m.Name });
         }
 
-
-        [HttpGet]
+        [HttpPost]
         [Route("travelinsuranceprice")]
-        public decimal TravelInsurancePrice(TravelInsuranceModel model)
+        public IHttpActionResult TravelInsurancePrice(TravelInsuranceModel model)
         {
             var riskItem = new TravelRiskItem
             {
                 RegionID = model.RegionID,
-                 NumberOfChildren  = model.NumberOfChildren,
-                 NumberOfAdultsUnder60 = model.NumberOfAdultsUnder60,
-                 DateFrom = model.DateFrom,
-                 DateTo = model.DateTo,
-                 SportId = model.SportId,
-                 InsuranceAmmount = model.InsuranceAmmount
+                NumberOfChildren = model.NumberOfChildren,
+                NumberOfAdultsUnder60 = model.NumberOfAdultsUnder60,
+                DateFrom = model.DateFrom,
+                DateTo = model.DateTo,
+                SportId = model.SportId,
+                InsuranceAmmount = model.InsuranceAmmount
             };
-            return _priceService.GetTravelInsurancePrice(riskItem); 
-
+            return Ok(new { price = _priceService.GetTravelInsurancePrice(riskItem) });
         }
     }
 }

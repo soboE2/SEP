@@ -29,7 +29,9 @@
         };
         var getTravelInsurancePrice = function () {
             var travelInsuranceRiskItem = {};
-            travelInsuranceRiskItem.RegionID = isnurance.travel.region
+            var travelInsuranceModel = getTravelInsurance();
+            var price = null;
+            return travelInsuranceService.travelAmmount.getPrice(travelInsuranceModel).$promise;
         }
 
         return {

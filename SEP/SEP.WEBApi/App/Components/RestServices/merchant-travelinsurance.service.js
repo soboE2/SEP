@@ -4,10 +4,10 @@
 
     travelInsuranceService.$inject = ['$resource'];
     function travelInsuranceService($resource) {
-    	var travelInsuranceAmmountUrl = "http://travelinsurance.local/api/insurance/travelinsuranceprice";
+        var travelInsuranceAmmountUrl = "http://travelinsurance.local/api/insurance/travelinsuranceprice";
 
-    	var retValue = {};
-    	retValue.travelAmmount = $resource(travelInsuranceAmmountUrl, {});
+        var retValue = {};
+        retValue.travelAmmount = $resource(travelInsuranceAmmountUrl, {}, { getPrice: { method: 'POST' } });
 
     	return retValue;
     }

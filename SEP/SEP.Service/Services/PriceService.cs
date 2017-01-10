@@ -1,5 +1,7 @@
 ﻿using SEP.Contract.Repositories;
+using SEP.Contract.ServiceModels;
 using SEP.Contract.Services;
+using SEP.Service.Helpers;
 
 namespace SEP.Service.Services
 {
@@ -12,14 +14,20 @@ namespace SEP.Service.Services
             _riskItemRepository = riskItemRepository;
         }
 
-        public decimal GetTravelInsurancePrice(Contract.ServiceModels.TravelRiskItem riskItem)
+        public decimal GetTravelInsurancePrice(TravelRiskItem riskItem)
         {
             var region = _riskItemRepository.GetById(riskItem.RegionID);
+            var sport = riskItem.SportId.HasValue ? _riskItemRepository.GetById(riskItem.SportId.Value) : null;
 
+            var workingMemory = RuleBaseHelper.GetWorkingMemoryForRule("TravelInsurancePrice");
 
+            workingMemory.assertObject(region);
+            workingMemory.assertObject(sport);
+            workingMemory.assertObject(riskItem);
 
+            workingMemory.fireAllRules();
 
-            return default(decimal);
+            return riskItem.RuleAmmount;
         }
     }
 }

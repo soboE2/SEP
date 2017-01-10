@@ -16,5 +16,6 @@ namespace SEP.Contract.ServiceModels
         public DateTime DateTo { get; set; }
         public int? SportId { get; set; }
         public decimal InsuranceAmmount { get; set; }
+        public decimal RuleAmmount { get; set; }
     }
 }

@@ -19,7 +19,7 @@ namespace SEP.Repository.Repositories
 
         public T GetById(int id)
         {
-            throw new System.NotImplementedException();
+            return _dbSet.Find(id);
         }
 
         public IEnumerable<T> GetAll()

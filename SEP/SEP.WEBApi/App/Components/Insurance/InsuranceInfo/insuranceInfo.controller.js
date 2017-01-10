@@ -8,9 +8,11 @@
 
         iic.insurance = insuranceService.getInsurance();
         iic.insurance.travel = insuranceService.getTravelInsurance();
-        iic.region = search(iic.insurance.travel.selectedRegion, regions)
-        iic.sport = search(iic.insurance.travel.selectedSport, sports)
-
+        iic.region = search(iic.insurance.travel.regionID, regions)
+        iic.sport = search(iic.insurance.travel.sportId, sports)
+        insuranceService.getTravelInsurancePrice().then(function (response) {
+            iic.price = response.price;
+        });
 
 
 

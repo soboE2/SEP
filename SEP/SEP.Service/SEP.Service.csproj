@@ -34,10 +34,12 @@
     <Reference Include="Autofac">
       <HintPath>..\packages\Autofac.4.2.1\lib\net45\Autofac.dll</HintPath>
     </Reference>
-    <Reference Include="drools-3.0">
+    <Reference Include="drools-3.0, Version=0.0.0.0, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\lib\drools-3.0.dll</HintPath>
     </Reference>
-    <Reference Include="drools-dep">
+    <Reference Include="drools-dep, Version=0.0.0.0, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\lib\drools-dep.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
@@ -47,10 +49,12 @@
     <Reference Include="EntityFramework.SqlServer">
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
-    <Reference Include="IKVM.GNU.Classpath">
+    <Reference Include="IKVM.GNU.Classpath, Version=0.28.0.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\lib\IKVM.GNU.Classpath.dll</HintPath>
     </Reference>
-    <Reference Include="IKVM.Runtime">
+    <Reference Include="IKVM.Runtime, Version=0.28.0.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\lib\IKVM.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="nunit.core">
@@ -62,6 +66,7 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -87,6 +92,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\drools.dotnet\drools.dotnet.csproj">
+      <Project>{03CF07A9-B4C7-4D83-8BCF-69FCE844FAC2}</Project>
+      <Name>drools.dotnet</Name>
+    </ProjectReference>
     <ProjectReference Include="..\SEP.Contract\SEP.Contract.csproj">
       <Project>{bbe1e66e-0aa0-46b7-b294-4bdc160a106c}</Project>
       <Name>SEP.Contract</Name>
@@ -101,7 +110,9 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Rules\TravelInsurancePrice.drl" />
+    <EmbeddedResource Include="Rules\TravelInsurancePrice.drl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

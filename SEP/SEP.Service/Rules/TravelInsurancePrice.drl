@@ -1,1 +1,20 @@
-﻿
+﻿package sep.drools.rules
+
+import SEP.Model.Model;
+import SEP.Contract.ServiceModels;
+
+rule "Region risk"
+	when
+		$coeficient = 1
+		riskItem : TravelRiskItem()
+		exists( RiskItem( Risk(Name == "Sport"),
+				 price : Price != null,
+				 coeficient : Coefficient != null
+			   )
+	then
+		riskItem.RuleAmmount = (riskItem.InsuranceAmmount + price) * coeficient
+		modify(riskItem)
+end;
+
+
+

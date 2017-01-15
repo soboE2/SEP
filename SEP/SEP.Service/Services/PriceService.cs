@@ -1,7 +1,13 @@
-﻿using SEP.Contract.Repositories;
+﻿using org.drools.dotnet;
+using org.drools.dotnet.compiler;
+using org.drools.dotnet.rule;
+using SEP.Contract.Repositories;
 using SEP.Contract.ServiceModels;
 using SEP.Contract.Services;
 using SEP.Service.Helpers;
+using System;
+using System.IO;
+using System.Reflection;
 
 namespace SEP.Service.Services
 {
@@ -16,18 +22,32 @@ namespace SEP.Service.Services
 
         public decimal GetTravelInsurancePrice(TravelRiskItem riskItem)
         {
-            var region = _riskItemRepository.GetById(riskItem.RegionID);
-            var sport = riskItem.SportId.HasValue ? _riskItemRepository.GetById(riskItem.SportId.Value) : null;
+            string assemblyPath = AppDomain.CurrentDomain.RelativeSearchPath;
+            System.IO.Stream stream = new FileStream(Path.Combine(assemblyPath, @"Rules\", "TravelInsurancePrice.drl"), FileMode.Open);
+            try
+            {
+                var region = _riskItemRepository.GetById(riskItem.RegionID);
+                var sport = riskItem.SportId.HasValue ? _riskItemRepository.GetById(riskItem.SportId.Value) : null;
 
-            var workingMemory = RuleBaseHelper.GetWorkingMemoryForRule("TravelInsurancePrice");
+                PackageBuilder builder = new PackageBuilder();
+                builder.AddPackageFromDrl(stream);
+                Package pkg = builder.GetPackage();
+                RuleBase ruleBase = RuleBaseFactory.NewRuleBase();
+                ruleBase.AddPackage(pkg);
+                WorkingMemory workingMemory = ruleBase.NewWorkingMemory();
 
-            workingMemory.assertObject(region);
-            workingMemory.assertObject(sport);
-            workingMemory.assertObject(riskItem);
+                workingMemory.assertObject(region);
+                workingMemory.assertObject(sport);
+                workingMemory.assertObject(riskItem);
 
-            workingMemory.fireAllRules();
+                return riskItem.RuleAmmount;
+            }
+            finally
+            {
+                stream.Close();
+            }
 
-            return riskItem.RuleAmmount;
+
         }
     }
 }

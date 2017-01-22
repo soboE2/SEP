@@ -30,7 +30,7 @@ namespace SEP.Service.Services
                 var sport = riskItem.SportId.HasValue ? _riskItemRepository.GetById(riskItem.SportId.Value) : null;
 
                 PackageBuilder builder = new PackageBuilder();
-                builder.AddPackageFromDrl(stream);
+                builder.AddPackageFromDrl("TravelInsurancePrice.drl",stream);
                 Package pkg = builder.GetPackage();
                 RuleBase ruleBase = RuleBaseFactory.NewRuleBase();
                 ruleBase.AddPackage(pkg);

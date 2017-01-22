@@ -29,6 +29,14 @@
                     controller: 'InsuranceInfoController as iic'
                 }
             }
+        })
+        .state('main.insurance.userinfo', {
+            url: '/insurance/userInfo',
+            views: {
+                'content@': {
+                    templateUrl: 'app/components/insurance/userinfo/userinfo.html',
+                }
+            }
         });
 
         //injektuje sport servis

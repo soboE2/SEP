@@ -2,6 +2,7 @@
     "use strict";
     angular.module('merchant-app.insurance').controller('InsuranceController',InsuranceController);
     angular.module('merchant-app.insurance').directive('personRequired', PersonRequired);
+    angular.module('merchant-app.insurance').directive('onlyDigits', OnlyDigits);
     InsuranceController.$inject = ['sports', 'regions', 'insuranceService', '$state'];
     function InsuranceController(sports, regions, insuranceService, $state) {
         var ic = this;
@@ -49,6 +50,20 @@
         };
     }
 
+    function OnlyDigits() {
+        return {
+            require: 'ngModel',
+            link: function (scope, elm, attrs, ctrl) {
+                ctrl.$validators.onlyDigits = function (modelValue, viewValue) {
+                    if ((viewValue % 1) === 0) {
+                        return false;
+                    } else {
+                        return true;
+                    }
+                }
+            }
+        };
+    }
 
 
 })();

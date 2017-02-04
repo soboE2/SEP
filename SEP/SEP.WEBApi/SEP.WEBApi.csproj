@@ -197,6 +197,7 @@
     <Content Include="App\Components\Insurance\insurance.service.js" />
     <Content Include="App\Components\Insurance\InsuranceInfo\insuranceInfo.controller.js" />
     <Content Include="App\Components\Insurance\InsuranceInfo\InsuranceInfo.html" />
+    <Content Include="App\Components\Insurance\UserInfo\userInfo.controller.js" />
     <Content Include="App\Components\Insurance\UserInfo\userInfo.html" />
     <Content Include="App\Components\RestServices\merchant-region.module.js" />
     <Content Include="App\Components\RestServices\merchant-region.service.js" />

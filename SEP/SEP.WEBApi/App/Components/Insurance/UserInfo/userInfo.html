@@ -3,37 +3,42 @@
 <!-- Form -->
 <div class="row 200%">
     <div class="6u 12u$(medium)">
-        <form method="post" action="#">
+        <form method="post" action="#" name="userForm">
             <div class="row uniform">
 
                 <div class="6u 12u$(xsmall)">
-                    <input type="text" name="demo-name" id="demo-name" value="" placeholder="Name" />
+                    <input type="text" ng-model="name" name="name" id="demo-name" value="" placeholder="Name" ng-minlength="2" required />
                 </div>
-
+                
                 <div class="6u 12u$(xsmall)">
-                    <input type="text" name="demo-surname" id="demo-surname" value="" placeholder="Surname" />
+                    <input type="text" ng-model="surname" name="surname" id="demo-surname" value="" placeholder="Surname" ng-minlength="2" required/>
                 </div>
 
                 <div class="12u$">
-                    <input type="text" name="demo-address" id="demo-address" value="" placeholder="Address" />
+                    <div ng-show="(userForm.name.$touched && userForm.name.$invalid) || (userForm.surname.$touched && userForm.surname.$invalid)">Name and surname are reqiured.</div>
                 </div>
 
                 <div class="12u$">
-                <input type="text" name="demo-personalno" id="demo-personalno" value="" placeholder="Personal number" />
+                    <input type="text" name="address" id="demo-address" value="" placeholder="Address" />
+
                 </div>
 
                 <div class="12u$">
-                    <input type="text" name="demo-passportno" id="demo-passportno" value="" placeholder="Passport number" />
+                <input type="text" name="personalno" id="demo-personalno" value="" placeholder="Personal number" />
                 </div>
 
                 <div class="12u$">
-                    <input type="text" name="demo-telephone" id="demo-telephone" value="" placeholder="Telephone number" />
+                    <input type="text" name="passportno" id="demo-passportno" value="" placeholder="Passport number" />
+                </div>
+
+                <div class="12u$">
+                    <input type="text" name="telephone" id="demo-telephone" value="" placeholder="Telephone number" />
                 </div>
 
                 <!-- Za nosioca osiguranja je potrebno uneti i email adresu
                  kako bi dobio poruku o uspešnoj/neuspešnoj kupovini osiguranja. -->
                 <div class="12u$">
-                    <input type="email" name="demo-email" id="demo-email" value="" placeholder="Email" />
+                    <input type="email" name="email" id="demo-email" value="" placeholder="Email" />
                 </div>
 
             </div>

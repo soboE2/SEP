@@ -22,19 +22,20 @@
                      <div ng-if="ic.formName.region.$dirty" ng-show="ic.formName.region.$error.required">This field is required.</div>                  
                 </div>
                 <div class="4u 12u$(xsmall)">
-                     <input type="number" step ="1"  name="childNumber" ng-model ="ic.insurance.travel.numberOfChildren" placeholder="Children (0 - 18)" 
-                            person-required required-fields ="{{ic.formName.adults18Number.$modelValue}},{{ic.formName.adults60Number.$modelValue}}">                   
+                     <input type="number" step ="1"  name="childNumber" ng-min="1" ng-model ="ic.insurance.travel.numberOfChildren" placeholder="Children (0 - 18)" 
+                            only-digits person-required required-fields ="{{ic.formName.adults18Number.$modelValue}},{{ic.formName.adults60Number.$modelValue}}">                   
                 </div>
                 <div class="4u 12u$(xsmall)">
-                    <input type="number" name="adults18Number" ng-model ="ic.insurance.travel.numberOfAdultsUnder60" placeholder="Adults (18 - 60)"
-                            person-required required-fields ="{{ic.formName.childNumber.$modelValue}},{{ic.formName.adults60Number.$modelValue}}">
+                    <input type="number" name="adults18Number" ng-min="1" ng-model ="ic.insurance.travel.numberOfAdultsUnder60" placeholder="Adults (18 - 60)"
+                            only-digits person-required required-fields ="{{ic.formName.childNumber.$modelValue}},{{ic.formName.adults60Number.$modelValue}}">
                 </div>
                 <div class="4u 12u$(xsmall)">
-                    <input type="number" name="adults60Number"  ng-model ="ic.insurance.travel.numberOfAdultsOver60" placeholder="Adults (over 60)"
-                            person-required required-fields ="{{ic.formName.childNumber.$modelValue}},{{ic.formName.adults18Number.$modelValue}}">
+                    <input type="number" name="adults60Number" ng-min="1"  ng-model ="ic.insurance.travel.numberOfAdultsOver60" placeholder="Adults (over 60)"
+                            only-digits person-required required-fields ="{{ic.formName.childNumber.$modelValue}},{{ic.formName.adults18Number.$modelValue}}">
                 </div>
                 <div class="12u$" ng-show="ic.formName.adults18Number.$error.personRequired || ic.formName.adults60Number.$error.personRequired || ic.formName.childNumber.$error.personRequired">At least one person is required</div>
-                
+                <div class="12u$" ng-show="ic.formName.adults18Number.$error.onlyDigits || ic.formName.adults60Number.$error.onlyDigits || ic.formName.childNumber.$error.onlyDigits">No decimal numbers</div>
+               
               
                 <div class="6u 12u$(xsmall)">
                     <div class="wrapper">
@@ -73,6 +74,7 @@
                             </select>
                         </div>
                     </div>
+                <div ng-if="ic.formName.amount.$dirty" ng-show="ic.formName.amount.$error.required">This field is required.</div>
                     <div class="12u$">
                         <ul class="actions fit">
                             <li><a ng-click="ic.goToDetails()" class="button special fit">Calculate</a></li>
